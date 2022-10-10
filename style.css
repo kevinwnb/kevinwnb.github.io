@@ -5,8 +5,9 @@
 
 div.miranda-logo-container {
     display: flex;
-    padding: 50px 0;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
     position: relative;
     z-index: 1;
 }
