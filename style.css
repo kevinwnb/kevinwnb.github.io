@@ -37,6 +37,10 @@ div.map {
     padding: 50px 0;
 }
 
+div.map > div > div {
+    border-radius: 1.5rem;
+}
+
 div.down-arrow {
     display: flex;
     width: 100%;
