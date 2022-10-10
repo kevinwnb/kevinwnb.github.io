@@ -10,11 +10,13 @@ div.miranda-logo-container {
     height: 100vh;
     position: relative;
     z-index: 1;
+    padding: 0 1rem;
 }
 
 div.miranda-logo-container img {
     border-radius: 1000cm;
     max-width: 500px;
+    width: 100%;
 }
 
 div.bg {
