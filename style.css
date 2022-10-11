@@ -58,7 +58,7 @@ div.down-arrow i {
     color: #960001;
     position: relative;
     animation-name: arrow-down;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in-out;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     opacity: 0;
