@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial;
+}
+
+@font-face {
+      font-family: "robo";
+      src: url("assets/fonts/robo.ttf");
+}
+
+@font-face {
+    font-family: adequate;
+    src: url("assets/fonts/adequate.ttf");
+}
+
+html,
+body {
+    /*background-color: #272830;*/
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    margin-bottom: 50px;
+}
+
+.navbar-scrolled {
+    margin: 0;
+    border-radius: 0px;
+    background-color: #1b1c22 !important;
+}
+
+.navbar .menu-logo {
+    width: 30px;
+    height: 30px;
+}
+
+section:not(#inicio) {
+    padding: 50px 0;
+    background-color: white;
+}
+
+section h2 {
+    border: 2px solid #4d4d4d;
+    color: #4d4d4d;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 7px;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+section#inicio .bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-image: url("assets/images/bg.jpg");
+    width: 100%;
+    height: 25vh;
+    background-position: center;
+    background-size: cover;
+    margin-top: 50px;
+}
+
+section#inicio .bg > div {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 50px 0;
+}
+
+section#inicio .bg h2 {
+    color: white;
+    letter-spacing: 0.5rem;
+    border: 0px !important;
+    margin: 0;
+    padding: 0;
+}
+
+section#inicio .bg h4 {
+    color: lightgray;
+}
+
+
+
+section#message form {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+section#message div.sent {
+    width: 100px;
+    height: 100px;
+    border-radius: 150px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+
+
+section#servicios {
+    background-color: #01588d;
+    border-radius: 10px;
+}
+
+section#servicios h2 {
+    color: lightyellow;
+    border-color: lightyellow;
+}
+
+section#servicios .menu {
+    padding-bottom: 0px;
+}
+
+section#servicios .content {
+    background-color: white;
+    border-radius: 10px;
+}
+
+section#servicios .menu a {
+    color: white;
+    padding: 15px;
+    margin: 10px 5px 0px 5px;
+    text-decoration: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.2);
+}
+
+section#servicios .menu a.active {
+    color: black;
+    background-color: white;
+}
+
+section#servicios .servicio {
+    padding: 50px;
+}
+
+section#servicios .description {
+    background-color: aqua;
+    position: relative;
+    bottom: 0;
+}
+
+.modal .msg h1 {
+    color: darkgreen;
+}
+
+section#proyectos > div {
+    background-color: white;
+}
+
+section#proyectos #lista-proyectos h4 {
+    border-bottom: 1px solid black;
+}
+
+section#proyectos i {
+    font-size: 3rem;
+}
+
+section#proyectos img, section#proyectos video {
+    border-radius: 15px;
+}
+
+
+
+footer .row {
+    background-color: #01588d;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+footer a i {
+    font-size: 3rem;
+    color: white;
+    transition: color 0.25s;
+}
+
+@media only screen and (min-width: 768px) {
+  
+}
+
+
+
+.title {
+    font-size: 1.75rem;
+    font-family: robo;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    letter-spacing: 0.4rem;
+    font-family: robo;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+    }
+}

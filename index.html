@@ -1,59 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" dir="ltr">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kevin Portfolio</title>
+    <!--devicons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--local style-->
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <!-- <script src="particles.min.js"></script>
-    <script src="app.js" defer></script> -->
-    <script src="script.js" defer></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--recaptcha v3-->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="script.js" charset="utf-8" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="bg">
+    <!-- The Modal -->
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
 
-    </div>
-    <div class="down-arrow">
-        <i class="fa-solid fa-caret-down"></i>
-    </div>
-    <div class="miranda-logo-container">
-        <img src="./assets/images/logo miranda.jpeg" alt="Miranda">
-    </div>
-    <div class="map">
-        <div class="mapouter">
-            <div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=cafeteria%20miranda%20aguadulce&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                <style>
-                    .mapouter {
-                        position: relative;
-                        text-align: right;
-                        height: auto;
-                        width: 100%;
-                        max-width: 600px;
-                        height: 400px;
-                    }
-                    </style>
-                <style>
-                    .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: auto;
-                        width: 100%;
-                        max-width: 600px;
-                        height: 400px;
-                    }
-                </style>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Endorsar</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form onsubmit="endorsar(event)" class="formulario-endorsar" action="javascript:void(0)"
+                        method="post">
+                        <input class="form-control" type="text" name="nombre" placeholder="Nombre">
+                        <input class="form-control my-3" type="text" name="email" placeholder="Email (opcional)">
+                        <input class="form-control" type="text" name="comentario" placeholder="Comentario (opcional)">
+                        <button class="btn btn-info mt-3" type="submit" name="button">Enviar</button>
+                    </form>
+                    <div class="d-none msg text-center">
+                        <h1><i class="fa-solid fa-circle-check"></i></h1>
+                        <h3>Gracias</h3>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
             </div>
         </div>
+    </div>
+    <div class="container">
+
+        <section id="inicio">
+            <div class="bg">
+                <div>
+                    <h2 class="title">Informática Europa</h2>
+                    <h4>Reparación de equipos</h4>
+                </div>
+            </div>
+        </section>
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <!-- Navbar brand -->
+                    Menú
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a id="link-inicio" class="nav-link inicio" aria-current="page"
+                                href="javascript:void(0)">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="link-servicios" class="nav-link servicios" href="javascript:void(0)"
+                                tabindex="-1">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="link-location" class="nav-link location" href="javascript:void(0)"
+                                tabindex="-1">Ubicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="link-contact" class="nav-link contact" href="javascript:void(0)"
+                                tabindex="-1">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <section id="servicios">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Servicios</h2>
+                </div>
+
+                <ul class="text-white">
+                    <li>
+                        <h3>Reparación de sistemas con módulos intercambiables</h3>
+                    </li>
+                    <li>
+                        <h3>Backups</h3>
+                    </li>
+                    <li>
+                        <h3>Instalación de sistemas operativos</h3>
+                    </li>
+                    <li>
+                        <h3>Asesoramiento general</h3>
+                    </li>
+                    <li>
+                        <h3>Asesoramiento para nuevas compras</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="location">
+            <div class="text-center">
+                <h2>Ubicación</h2>
+            </div>
+            <div class="mx-auto mapouter">
+                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=calle%20mezquita%2024%20aguadulce&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                        href="https://fmovies-online.net"></a><br>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 500px;
+                            width: 600px;
+                        }
+                    </style><a href="https://www.embedgooglemap.net">inserting google maps</a>
+                    <style>
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 500px;
+                            width: 600px;
+                        }
+                    </style>
+                </div>
+            </div>
+        </section>
+
+        <section id="message">
+            <div class="text-center">
+                <h2>Contacto</h2>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input id="nombre" class="form-control" type="text">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Teléfono</label>
+                    <input id="phone" class="form-control" type="text">
+                </div>
+                <div class="mb-3">
+                    <label for="msg" class="form-label">Mensaje</label>
+                    <textarea class="form-control" name="msg" id="msg" rows="5"></textarea>
+                </div>
+                <button data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' type="submit"
+                    class="g-recaptcha w-100 btn btn-dark btn-lg">Enviar Mensaje</button>
+            </form>
+
+            <div class="sent bg-success text-white">
+                <i class="fa-solid fa-check"></i>
+            </div>
+        </section>
+
+        <footer>
+            <section id="contact">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 col-md-1 mt-5 mt-md-0 text-center">
+                        <a href="javascript:void(0)" class="wa"><i class="fa-brands fa-whatsapp-square"></i></a>
+                    </div>
+                    <div class="col-6 col-md-1 mt-5 mt-md-0 text-center">
+
+                        <a href="https://www.linkedin.com/in/kevinwnb" target="_blank"><i
+                                class="in fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div class="col-6 col-md-1 mt-5 mt-md-0 text-center">
+
+                        <a href="https://www.facebook.com/kevin.wegener.3154" target="_blank"><i
+                                class="fb fa-brands fa-facebook-square"></i></a>
+                    </div>
+                    <div class="col-6 col-md-1 mt-5 mt-md-0 text-center">
+
+                        <a href="https://github.com/kevinwnb" target="_blank"><i class="gh fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+        </footer>
     </div>
 </body>
 
