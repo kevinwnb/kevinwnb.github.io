@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.profile-header {
+    width: 100%;
+    height: calc(50vh + 50px);
+    background-color: #0e2a47;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    /* background-image: url("./assets/images/Meteor.svg"); */
+}
+
+.profile-img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.profile-img img {
+    width: 150px;
+    height: auto;
+    border-radius: 200px;
+    border: 7px solid white;
+}
+
+.page {
+    background-color: white;
+    position: relative;
+    top: calc(+50vh);
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page>div {
+    top: calc(-82px);
+    position: relative;
+}
+
+.name {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name h4 {
+    margin-top: 15px;
+}
+
+.social-media {
+    font-size: 3rem;
+}
+
+.social-media a {
+    margin: 0 20px;
+}
+
+.social-media a i {
+    transition: all 0.25s;
+}
+
+.social-media a:hover i {
+    transform: scale(1.2);
+}
+
+.fa-instagram {
+    color: #E1306C;
+}
+
+.fa-facebook {
+    color: #4267B2;
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+}
+
+div.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 70px 0;
+}
+
+a.download-cv {
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: gold;
+    border-radius: 100px;
+    color: #233b5f;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+    border-right: none;
+    text-decoration: none;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+}
+
+a.download-cv:hover {
+    transform: scale(1.10);
+}
+
+a.download-cv i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+a.accepting-projects {
+    transition: all 0.25s;
+    background-color: #3c3c3c;
+    color: greenyellow;
+    font-size: 1rem;
+    padding: 25px 50px;
+    border-radius: 100px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+    border-right: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+a.accepting-projects:hover {
+    transform: scale(1.10);
+}
+
+a.accepting-projects i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.links {
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.links > a {
+    display: flex;
+    margin: 30px 0;
+    width: 100%;
+    justify-content: center;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.links > a > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b528c;
+    width: 100%;
+    border-radius: 30px;
+    padding: 40px 20px;
+    color: white;
+    transition: all 0.25s;
+}
+
+.links > a:hover > div {
+    transform: scale(1.10);
+}
+
+.links i {
+    font-size: 4rem;
+    margin: 0 50px;
+    color: #fff;
+}
+
+.links i.fa-link {
+    font-size: 2rem;
+    margin-left: auto;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .links h2 {
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    .links i {
+        font-size: 3rem;
+        margin: 0 10px;
+    }
+
+    .links i.fa-link {
+        font-size: 1rem;
+    }
+
+    .links > a {
+        margin: 7px 0;
+    }
+
+    .links > a > div {
+        padding: 30px 15px;
+    }
+}
+
+.no-projects {
+    transition: all 0.25s;
+    color: white;
+    font-size: 1rem;
+    padding: 25px 50px;
+    border-radius: 100px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+    border-right: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: firebrick;
+    display: none;
+}
+
+div.consejos {
+    display: none;
+}
+
+div.consejos .links, div.donations .qr {
+    position: relative;
+    top: calc(+89px);
+}
+
+div.donations .qr {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 89px);
+    background-color: #233b5f;
+    justify-content: center;
+    align-items: center;
+}
+
+div.donations .qr img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+div.donations {
+    display: none;
+}
+
+nav {
+    padding: 30px 30px;
+    background-color: #233b5f;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+nav a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: gold;
+}
