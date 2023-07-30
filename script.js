@@ -1,9 +1,5 @@
 let endorsmentType
 
-particlesJS.load('particles-js', 'particles-js/particles.json', function () {
-    console.log('callback - particles.js config loaded');
-});
-
 document.querySelectorAll("section#inicio .arrow").forEach(e => {
     e.addEventListener("click", function () {
         $("html").animate({
